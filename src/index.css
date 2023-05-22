@@ -1,13 +1,84 @@
-body {
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css");
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+.todo_ListApp{
+  background-color: rgb(5, 5, 47);
+  height: 120vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+figure{
+  text-align: center;
+}
+figcaption{
+  color: white;
+}
+.addItems, .showItems{
+   width: 400px;
+   line-height: 50px;
+}
+.addItems{
+  position: relative;
+}
+input{
+  border-radius: 8px;
+  line-height: 50px;
+  width: 100%;
+}
+input[type=text]{
+  font-size: 18px;
+  font-weight: 700;
+}
+input:focus{
+  outline: transparent;
+}
+.addItems i{ 
+  position: absolute;
+  right: 0;
+  font-size: 30px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.eachItem{
+  background-color: rgb(25, 25, 207);
+  color: white;
+  border-radius: 8px;
+}
+.eachItem p{
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.eachItem i{
+  color: white;
+}
+
+.eachItem:hover{
+  background-color: white;
+  color: gray;
+}
+
+.eachItem:hover i{
+  color: red;
+}
+
+@media (max-width: 575px){
+  .todo_ListApp{
+    height: 120vh;
+    min-width: 450px;
+  }
+  figure img{
+    width: 100px;
+  }
+  .addItems, .showItems{
+    width: 300px;
+    line-height: 20px;
+ }
+ .addItems i{
+  transform: translateY(50%);
+ }
 }
